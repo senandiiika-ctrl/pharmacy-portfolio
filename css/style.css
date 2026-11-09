@@ -170,3 +170,19 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offse
 @media(max-width:720px){.feature-heading{display:block;padding-top:26px}.feature-heading>p{margin-top:12px}.feature-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.feature-card-visual{height:120px;min-height:120px}.feature-visual-title{font-size:17px}.feature-card-body{padding:10px;min-height:100px}}
 @media(max-width:390px){.feature-grid{gap:9px}.feature-card-visual{height:105px;min-height:105px;padding:11px}.feature-visual-title{font-size:15px}.feature-card-body h3{font-size:14px}}
 @media(prefers-reduced-motion:reduce){.feature-card{transition:none}.feature-card:hover{transform:none}}
+
+
+/* Compact media embeds inside the LinkedIn-style cards */
+.creator-showcase{background:#f6f6f4;color:#202b3d}
+.creator-showcase .section-label{color:#8c8e92}
+.creator-showcase .feature-heading h2{color:var(--navy)}
+.creator-showcase .feature-heading h2 em{color:#b28d55}
+.creator-showcase .feature-heading>p{color:#667184}
+.creator-showcase .feature-year-heading h3{color:#24334b}
+.creator-showcase .feature-year-heading span{color:#8b929d}
+.creator-showcase .feature-video-frame{height:142px;min-height:142px;background:#17243a;overflow:hidden}
+.creator-showcase .feature-video-frame iframe{width:100%;height:100%;display:block;border:0;object-fit:cover}
+.creator-showcase .feature-video-card .feature-card-body{min-height:104px}
+.creator-showcase .creator-note{color:#77808e;text-align:left;margin-top:20px}
+@media(max-width:720px){.creator-showcase .feature-video-frame{height:120px;min-height:120px}}
+@media(max-width:390px){.creator-showcase .feature-video-frame{height:105px;min-height:105px}}
