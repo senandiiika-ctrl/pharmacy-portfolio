@@ -316,3 +316,25 @@ body{font-size:16px;line-height:1.78}
 @media(max-width:480px){
  .content-showcase .content-grid,.content-showcase .content-grid-articles,.gallery .gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
 }
+
+
+/* Captions visible beneath every video and documentation thumbnail */
+.content-showcase .content-card{display:flex;flex-direction:column;align-items:stretch;gap:5px;padding:0 0 9px;overflow:hidden}
+.content-showcase .content-card>.content-platform{display:block;margin:5px 8px 0;font-size:8px;line-height:1.3;letter-spacing:1px;font-weight:800;color:#a17a3c}
+.content-showcase .content-card>strong{display:block;margin:0 8px;font:700 12px/1.35 var(--display);color:#17243a;overflow-wrap:anywhere}
+.content-showcase .content-card>small{display:block;margin:0 8px;color:#687487;font-size:10px;line-height:1.45}
+.content-showcase .content-card>b{display:none}
+.content-showcase .content-thumb{width:100%;flex:none;margin:0}
+.gallery .gallery-card{overflow:hidden;background:#fff;border:1px solid #e5e9ef;box-shadow:0 5px 16px rgba(21,30,50,.045)}
+.gallery .gallery-card figcaption{display:flex;flex-direction:column;gap:4px;padding:9px 10px 11px}
+.gallery .gallery-card figcaption small{font-size:7px;line-height:1.35;letter-spacing:.8px;font-weight:800;color:#a17a3c}
+.gallery .gallery-card figcaption h3{margin:1px 0 0;font:700 11px/1.35 var(--display);color:#17243a}
+.gallery .gallery-card figcaption p{display:none}
+.gallery .gallery-card figcaption .inline-link{font-size:9px;margin-top:3px}
+@media(max-width:760px){
+ .content-showcase .content-card>.content-platform{font-size:7px;margin:4px 6px 0}
+ .content-showcase .content-card>strong{font-size:11px;margin:0 6px}
+ .content-showcase .content-card>small{font-size:9px;margin:0 6px}
+ .gallery .gallery-card figcaption{padding:8px}
+ .gallery .gallery-card figcaption h3{font-size:10px}
+}
