@@ -238,3 +238,9 @@ body{font-size:16px;line-height:1.78}
 .content-thumb-article strong{font:700 19px/1.2 var(--display);color:white;margin:8px 0 0}
 @media(max-width:760px){.content-thumb{height:145px}}
 @media(max-width:480px){.content-thumb{height:175px}}
+
+
+.content-thumb-embed{background:#eef1f5}
+.content-thumb-instagram iframe{position:absolute;top:-4px;left:50%;width:400px;height:460px;max-width:none;transform:translateX(-50%);border:0;pointer-events:none}
+.content-thumb-tiktok iframe{position:absolute;top:-10px;left:50%;width:250px;height:450px;transform:translateX(-50%);border:0;pointer-events:none}
+.content-thumb-article{background:linear-gradient(135deg,#13243b,#35516d 68%,#c78c36)}
