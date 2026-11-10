@@ -101,3 +101,61 @@ body{font-size:16px;line-height:1.78}
 .has-card-link a{position:relative;z-index:1}
 .has-card-link:hover{transform:translateY(-5px);box-shadow:0 17px 35px rgba(21,30,50,.13)}
 @media(prefers-reduced-motion:reduce){.has-card-link:hover{transform:none}}
+
+
+/* Compact layout: smaller cards and less vertical scrolling */
+.section{padding:76px 0}
+.section-heading{margin:25px 0 30px}
+.interest-grid{gap:11px}
+.interest-grid article{min-height:220px;padding:20px 19px}
+.interest-icon{font-size:23px;margin:16px 0 12px}
+.interest-grid h3{font-size:18px;margin-bottom:8px}
+.lead-grid{gap:11px}
+.lead-grid article{padding:19px 21px}
+.lead-grid small{margin-bottom:11px}
+.lead-grid h3{font-size:18px;margin:10px 0 6px}
+.timeline{margin-top:30px}
+.timeline article{padding:20px 0;gap:27px}
+.project-grid,.gallery-grid,.publication-grid{gap:12px}
+.project-card{min-height:235px;padding:21px 23px}
+.project-card>p{margin:28px 0 8px}
+.project-card h3{font-size:20px;margin-bottom:18px}
+.gallery-card img{height:195px}
+.gallery-card.gallery-wide img{min-height:225px}
+.gallery-card figcaption{padding:16px 19px}
+.gallery-card h3{font-size:18px;margin:7px 0}
+.publication-grid article{min-height:220px;padding:20px 22px}
+.publication-grid article>small{margin-top:23px}
+.publication-grid h3{font-size:17px;margin:8px 0 17px}
+.skills-grid{gap:12px}
+.education-card{padding:23px}
+.skill-stack{gap:11px}
+.skill-stack article{padding:18px 20px}
+.skill-stack h3{font-size:18px;margin:5px 0 12px}
+.chips{gap:6px}
+.chips span{padding:5px 9px}
+.fact-grid{gap:9px;margin-top:20px}
+.fact-grid div{padding:11px 13px}
+.contact-section{padding-top:58px}
+.contact-panel{padding:36px}
+@media(max-width:760px){
+ .section{padding:62px 0}
+ .section-heading{margin:22px 0 25px}
+ .timeline article{gap:6px;padding:17px 0}
+ .project-card{min-height:205px;padding:19px}
+ .gallery-card img,.gallery-card.gallery-wide img{height:185px;min-height:0}
+ .gallery-card figcaption{padding:15px 17px}
+ .publication-grid article{min-height:0;padding:19px}
+ .education-card{padding:21px}
+ .skill-stack article{padding:17px}
+ .contact-section{padding-top:48px}
+ .contact-panel{padding:27px 22px}
+}
+@media(max-width:520px){
+ .section{padding:55px 0}
+ .interest-grid article{min-height:0;padding:19px}
+ .interest-icon{margin:12px 0 10px}
+ .lead-grid article{padding:18px}
+ .gallery-card img,.gallery-card.gallery-wide img{height:170px}
+ .fact-grid div{padding:10px}
+}
