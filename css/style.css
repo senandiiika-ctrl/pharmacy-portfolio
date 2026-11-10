@@ -259,5 +259,4 @@ body{font-size:16px;line-height:1.78}
 .article-card-body>strong{font:700 22px/1.2 var(--display);color:#17243a;margin:0}
 .article-card-body>small{font-size:11px;line-height:1.7;color:#687487;max-width:390px}
 .article-card-bottom{padding-top:13px;border-top:1px solid #e0e5eb;color:#263b55;font-size:9px;font-weight:800;letter-spacing:1.2px}
-.article-arrow{font-size:17px;color:#b88c43}
 @media(max-width:760px){.content-grid-articles{grid-template-columns:1fr}.article-feature-card{min-height:205px}}
