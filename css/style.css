@@ -94,3 +94,10 @@ body{font-size:16px;line-height:1.78}
  .interest-grid p,.lead-grid p,.gallery-card p{font-size:15px}
  .section-tag{font-size:11px}
 }
+
+/* Full-card link affordance and accessible focus state */
+.has-card-link{cursor:pointer;position:relative}
+.has-card-link:focus-visible{outline:3px solid var(--amber);outline-offset:4px}
+.has-card-link a{position:relative;z-index:1}
+.has-card-link:hover{transform:translateY(-5px);box-shadow:0 17px 35px rgba(21,30,50,.13)}
+@media(prefers-reduced-motion:reduce){.has-card-link:hover{transform:none}}
