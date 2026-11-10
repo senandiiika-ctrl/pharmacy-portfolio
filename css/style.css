@@ -502,3 +502,99 @@ footer .brand-mark{border-radius:9px}
  .focus-card,.organization-card,.research-section .research-card,.feature-card,.button{transition:none}
  .focus-card:hover,.organization-card:hover,.research-section .research-card:hover,.feature-card:hover,.button:hover{transform:none}
 }
+
+
+/* Gemini-inspired portfolio refinement: clear hierarchy, warm accent, responsive stat cards */
+:root{
+  --navy:#151e32;
+  --navy2:#202c45;
+  --gold:#e5a12f;
+  --gold-light:#f6c76f;
+  --paper:#f7f8fb;
+  --ink:#171c28;
+  --muted:#657084;
+}
+body{background:#f7f8fb;color:#171c28}
+.site-header{background:#151e32;border-bottom:1px solid rgba(255,255,255,.08);box-shadow:0 8px 24px rgba(13,22,39,.14)}
+.brand,.site-header nav a{color:#f5f6f8}
+.brand-mark{background:#e5a12f;color:#151e32}
+.brand i{color:#e5a12f}
+.site-header nav a:hover{color:#f6c76f}
+.nav-contact{background:#e5a12f;color:#151e32!important}
+.nav-contact:hover{background:#f6c76f;color:#151e32!important}
+.menu-toggle span{background:#fff}
+.hero{background:#f7f8fb}
+.hero h1{color:#151e32}
+.hero h1 em{color:#d98222}
+.hero .eyebrow{color:#9a6a24}
+.hero .eyebrow span{background:#e5a12f}
+.hero-lead{color:#566176;font-weight:600}
+.button-gold{background:#e5a12f;color:#151e32}
+.button-gold:hover{background:#f6c76f}
+.text-link{color:#202c45}
+.hero-photo-frame{border:8px solid #fff;border-radius:20px;background:#151e32;box-shadow:0 18px 45px rgba(21,30,50,.18),12px 12px 0 rgba(229,161,47,.2)}
+.photo-caption{background:#151e32;color:#fff}
+.photo-caption small{color:#f6c76f}
+.hero-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:30px;max-width:510px}
+.hero-stats div{display:flex;flex-direction:column;gap:2px;padding:13px 15px;background:#fff;border:1px solid #e8ebf1;border-radius:12px;box-shadow:0 7px 18px rgba(21,30,50,.045)}
+.hero-stats strong{font-size:clamp(19px,2.2vw,25px);line-height:1.2;font-weight:800;color:#151e32}
+.hero-stats span{font-size:8px;font-weight:800;letter-spacing:1px;color:#7a8495}
+.hero-meta{margin-top:25px}
+.section-label{color:#7c8492}
+.section-intro h2,.about-heading h2,.featured-work h2,.contact h2{color:#151e32}
+.section-intro h2 em,.about-heading h2 em{color:#d98222}
+.focus-section,.featured-work,.creator-showcase{background:#f0f2f6}
+.focus-card,.organization-card,.skill-card,.feature-card{border:1px solid #e6e9ef;border-radius:13px;background:#fff;box-shadow:0 8px 24px rgba(21,30,50,.055)}
+.focus-card{border-top:3px solid #e5a12f}
+.focus-card:hover,.organization-card:hover,.feature-card:hover{border-color:rgba(229,161,47,.6)}
+.focus-card h3,.organization-card h3,.skill-card h3{color:#151e32}
+.focus-card .line-icon,.card-foot,.organization-role{color:#c17a20}
+.timeline{border-color:#e1e5eb}
+.timeline-item{border-color:#e8ebf0}
+.timeline-date{color:#9b722f}
+.tag{background:#fff4df;color:#99621b;border:1px solid #f2dfbd;border-radius:999px}
+.organization-card{border-top:3px solid #e5a12f}
+#projects{background:#f7f8fb;color:#171c28}
+#projects .section-label{color:#7c8492}
+#projects .section-intro h2{color:#151e32}
+#projects .section-intro h2 em{color:#d98222}
+#projects .section-intro>p{color:#657084}
+#projects .research-card{
+  min-height:330px;
+  background:#fff!important;
+  color:#171c28;
+  border:1px solid #e6e9ef;
+  border-top:4px solid #e5a12f;
+  border-radius:15px;
+  box-shadow:0 12px 28px rgba(21,30,50,.075);
+}
+#projects .research-card:before{background:radial-gradient(circle at 92% 8%,rgba(229,161,47,.11),transparent 35%)}
+#projects .research-top span:first-child{color:#687386}
+#projects .research-card .journal{background:#fff4df;color:#99621b;border-radius:999px;padding:6px 10px}
+#projects .research-type{color:#b97820}
+#projects .research-card h3{color:#151e32}
+#projects .research-bottom{color:#687386}
+#projects .research-bottom a{color:#a66b1d}
+.research-section#research{background:#151e32}
+.research-section#research .section-label{color:#c8ced8}
+.research-section#research .section-intro h2{color:#fff}
+.research-section#research .section-intro h2 em{color:#f6c76f}
+.research-section#research .research-card{border-radius:15px}
+.skills-section{background:#fff}
+.education-card{background:linear-gradient(145deg,#151e32,#253754);border:1px solid rgba(229,161,47,.35)}
+.skill-card{border-radius:14px}
+.skill-tags span{border-radius:999px}
+.contact-panel{background:linear-gradient(135deg,#151e32,#202e49);border:1px solid rgba(229,161,47,.45);border-radius:18px;box-shadow:0 22px 50px rgba(21,30,50,.2)}
+.contact-panel .eyebrow,.contact-panel .contact-intro h2 em{color:#f6c76f}
+.contact-panel .email-link{border-color:#e5a12f}
+.contact-panel .social-links a{border-radius:999px}
+footer .brand-mark{background:#e5a12f;color:#151e32}
+@media(max-width:760px){
+ .site-header nav{background:#151e32}
+ .hero-stats{max-width:none}
+}
+@media(max-width:430px){
+ .hero-stats{gap:7px}
+ .hero-stats div{padding:11px 9px}
+ .hero-stats span{font-size:7px;letter-spacing:.7px}
+}
