@@ -227,7 +227,7 @@ body{font-size:16px;line-height:1.78}
 .content-thumb{position:relative;width:100%;height:158px;overflow:hidden;background:#edf1f6;border-bottom:1px solid #e8ebf0}
 .content-thumb img{display:block;width:100%;height:100%;object-fit:cover}
 .content-thumb-embed iframe{position:absolute;top:-2px;left:0;width:100%;height:390px;border:0;pointer-events:none}
-.content-thumb-tiktok iframe{top:-8px;height:430px}
+.content-thumb-tiktok iframe{top:-8px;height:430px}.content-thumb-instagram iframe{top:-4px;height:520px;width:100%;}
 .content-card>.content-platform,.content-card>strong,.content-card>small,.content-card>b{margin-left:15px;margin-right:15px}
 .content-card>.content-platform{margin-top:13px;margin-bottom:7px}
 .content-card>strong{font-size:13px}
