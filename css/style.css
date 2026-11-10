@@ -338,3 +338,31 @@ body{font-size:16px;line-height:1.78}
  .gallery .gallery-card figcaption{padding:8px}
  .gallery .gallery-card figcaption h3{font-size:10px}
 }
+
+
+/* Final responsive portfolio tile layout */
+.content-showcase .content-grid{grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.content-showcase .content-card{width:100%;min-width:0;text-decoration:none}
+.content-showcase .content-thumb{position:relative;width:100%;aspect-ratio:3/4;height:auto;overflow:hidden;background:#e9edf3}
+.content-showcase .content-thumb img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .35s ease}
+.content-showcase .content-card:hover .content-thumb img{transform:scale(1.045)}
+.content-showcase .content-card>.content-platform{display:block}
+.content-showcase .content-card>strong{display:block}
+.content-showcase .content-card>small{display:block}
+.content-showcase .content-card>b{display:none}
+.gallery .gallery-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.gallery .gallery-card,.gallery .gallery-card.gallery-wide{grid-column:auto;min-width:0;overflow:hidden}
+.gallery .gallery-card img,.gallery .gallery-card.gallery-wide img{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:cover}
+.gallery .gallery-card figcaption{display:flex;flex-direction:column;gap:4px;padding:9px 10px 11px}
+.gallery .gallery-card figcaption p{display:none}
+@media(max-width:1000px){
+ .content-showcase .content-grid,.content-showcase .content-grid-articles,.gallery .gallery-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+}
+@media(max-width:760px){
+ .content-showcase .content-grid,.content-showcase .content-grid-articles,.gallery .gallery-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}
+}
+@media(max-width:480px){
+ .content-showcase .content-grid,.content-showcase .content-grid-articles,.gallery .gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+ .content-showcase .content-card>strong{font-size:10px}
+ .content-showcase .content-card>small{font-size:8px}
+}
