@@ -159,3 +159,11 @@ body{font-size:16px;line-height:1.78}
  .gallery-card img,.gallery-card.gallery-wide img{height:170px}
  .fact-grid div{padding:10px}
 }
+
+
+/* Icon-only software tools */
+.tool-icons{display:flex;flex-wrap:wrap;align-items:center;gap:13px}
+.tool-icon{width:48px;height:48px;display:grid;place-items:center;border:1px solid #e5e8ee;background:#f7f8fa;border-radius:12px;transition:transform .2s ease,box-shadow .2s ease}
+.tool-icon svg{width:31px;height:31px;display:block}
+.tool-icon:hover{transform:translateY(-3px);box-shadow:0 7px 16px rgba(21,30,50,.12)}
+@media(max-width:760px){.tool-icons{gap:10px}.tool-icon{width:44px;height:44px}.tool-icon svg{width:29px;height:29px}}
