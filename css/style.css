@@ -67,3 +67,30 @@
 .contact-links .social-icons a:nth-child(4) svg path{fill:none;stroke:currentColor;stroke-width:2.3}
 .btn-primary span,.scroll-down span{display:none}
 @media(max-width:760px){.hero-description{font-size:15px}.section-tag{font-size:10px}.contact-links .social-icons a{width:42px;height:42px}}
+
+
+/* Final readability pass: ensure labels and navigation are comfortably legible */
+body{font-size:16px;line-height:1.78}
+.header nav a{font-size:13px}
+.btn,.nav-cta{font-size:13px}
+.eyebrow{font-size:12px}
+.section-tag{font-size:12px}
+.hero-foot,.org,.timeline time{font-size:12px}
+.role-head label,.lead-grid label,.gallery-card figcaption small,.pub-meta,
+.fact-grid small,.project-top,.project-card>small,.chips span{font-size:11px}
+.stats span{font-size:10px}
+.about-text p,.section-heading p,.timeline p,.timeline li,
+.interest-grid p,.lead-grid p,.gallery-card p{font-size:15px;line-height:1.8}
+.fact-grid b{font-size:15px}
+.gallery-card h3,.interest-grid h3,.lead-grid h3{font-size:20px}
+.publication-grid h3,.project-card h3{font-size:21px}
+.contact-links .email{font-size:19px}
+.contact-links .social-icons a{width:46px;height:46px}
+.contact-links .social-icons svg{width:22px;height:22px}
+@media(max-width:760px){
+ .header nav a{font-size:15px}
+ .hero-description{font-size:16px}
+ .section-heading p,.about-text p,.timeline p,.timeline li,
+ .interest-grid p,.lead-grid p,.gallery-card p{font-size:15px}
+ .section-tag{font-size:11px}
+}
