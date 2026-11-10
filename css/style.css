@@ -167,3 +167,11 @@ body{font-size:16px;line-height:1.78}
 .tool-icon svg{width:31px;height:31px;display:block}
 .tool-icon:hover{transform:translateY(-3px);box-shadow:0 7px 16px rgba(21,30,50,.12)}
 @media(max-width:760px){.tool-icons{gap:10px}.tool-icon{width:44px;height:44px}.tool-icon svg{width:29px;height:29px}}
+
+
+/* Minimal section heading icons */
+.section-tag{display:flex;align-items:center;gap:9px}
+.section-tag>span{margin-right:0}
+.section-icon{width:17px;height:17px;display:inline-flex;align-items:center;justify-content:center;color:#d28a2b;flex:0 0 17px}
+.section-icon svg{width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+@media(max-width:520px){.section-icon{width:16px;height:16px;flex-basis:16px}}
