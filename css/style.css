@@ -186,3 +186,11 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offse
 .creator-showcase .creator-note{color:#77808e;text-align:left;margin-top:20px}
 @media(max-width:720px){.creator-showcase .feature-video-frame{height:120px;min-height:120px}}
 @media(max-width:390px){.creator-showcase .feature-video-frame{height:105px;min-height:105px}}
+
+
+/* Improve contrast for the press and news heading on the dark research section */
+.research-section .feature-heading h2{color:#fff}
+.research-section .feature-heading h2 em{color:#e0c99d}
+.research-section .feature-heading>p{color:#c2cad6}
+.research-section .research-bottom a{color:#e0c99d;font-size:10px;letter-spacing:1px;font-weight:700}
+.research-section .research-bottom a:hover{color:#fff}
