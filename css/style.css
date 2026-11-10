@@ -186,3 +186,20 @@ body{font-size:16px;line-height:1.78}
 .tool-icon[title]:hover,.tool-icon[title]:focus-visible{z-index:1001}
 @media(hover:hover){.tool-icon[title]:hover::after,.tool-icon[title]:focus-visible::after{opacity:1;visibility:visible;transform:translate(-50%,0)}.tool-icon[title]:hover::before,.tool-icon[title]:focus-visible::before{opacity:1;visibility:visible}}
 @media(max-width:760px){.tool-icon img{width:29px;height:29px}}
+
+/* Compact digital content showcase */
+.content-showcase{background:#f7f8fb}
+.content-feature{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center;margin-top:28px;padding:30px 34px;background:#fff;border:1px solid #e5e8ee;border-left:4px solid var(--amber);border-radius:11px;box-shadow:0 8px 22px rgba(21,30,50,.045)}
+.content-kicker{margin:0 0 10px;color:#a66b1d;font-size:10px;font-weight:800;letter-spacing:1.4px}
+.content-copy h2{font:800 clamp(32px,4vw,46px)/1.12 var(--display);letter-spacing:-.05em;color:var(--navy);margin:0 0 12px}
+.content-copy h2 em{font-style:normal;color:#d98222}
+.content-copy>p:not(.content-kicker){max-width:540px;margin:0;color:var(--muted);font-size:14px;line-height:1.8}
+.content-links{display:flex;flex-wrap:wrap;gap:18px;margin-top:20px}
+.content-links a{font-size:10px;font-weight:800;letter-spacing:1px;color:#a66b1d;border-bottom:1px solid #e5c58f;padding-bottom:3px}
+.content-results{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.content-results>div{padding:19px 18px;background:#f7f8fb;border:1px solid #e8ebf0;border-radius:8px}
+.content-results strong{display:block;font:800 32px/1.2 var(--display);color:var(--navy)}
+.content-results span{display:block;margin-top:5px;font-size:9px;font-weight:800;letter-spacing:1px;color:#808a99}
+.content-results>small{grid-column:1/-1;color:#929baa;font-size:8px;font-weight:800;letter-spacing:1.1px}
+@media(max-width:760px){.content-feature{grid-template-columns:1fr;gap:22px;padding:24px 21px}.content-results strong{font-size:28px}}
+@media(max-width:520px){.content-results{gap:8px}.content-results>div{padding:15px 12px}.content-results span{font-size:8px}}
