@@ -175,3 +175,12 @@ body{font-size:16px;line-height:1.78}
 .section-icon{width:17px;height:17px;display:inline-flex;align-items:center;justify-content:center;color:#d28a2b;flex:0 0 17px}
 .section-icon svg{width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
 @media(max-width:520px){.section-icon{width:16px;height:16px;flex-basis:16px}}
+
+
+/* Authentic app icons and accessible hover labels */
+.tool-icon{position:relative;overflow:visible}
+.tool-icon img{width:31px;height:31px;display:block;object-fit:contain;border-radius:7px}
+.tool-icon[title]::after{content:attr(title);position:absolute;left:50%;top:calc(100% + 9px);transform:translate(-50%,-4px);padding:6px 9px;border-radius:6px;background:#151e32;color:#fff;font-size:10px;font-weight:700;letter-spacing:.2px;line-height:1.2;white-space:nowrap;box-shadow:0 5px 14px rgba(0,0,0,.18);opacity:0;visibility:hidden;pointer-events:none;z-index:20;transition:opacity .16s ease,transform .16s ease,visibility .16s ease}
+.tool-icon[title]::before{content:"";position:absolute;left:50%;top:calc(100% + 3px);transform:translateX(-50%);border:5px solid transparent;border-bottom-color:#151e32;opacity:0;visibility:hidden;z-index:20;transition:opacity .16s ease,visibility .16s ease}
+@media(hover:hover){.tool-icon[title]:hover::after,.tool-icon[title]:focus-visible::after{opacity:1;visibility:visible;transform:translate(-50%,0)}.tool-icon[title]:hover::before,.tool-icon[title]:focus-visible::before{opacity:1;visibility:visible}}
+@media(max-width:760px){.tool-icon img{width:29px;height:29px}}
