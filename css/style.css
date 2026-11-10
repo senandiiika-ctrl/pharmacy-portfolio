@@ -177,10 +177,12 @@ body{font-size:16px;line-height:1.78}
 @media(max-width:520px){.section-icon{width:16px;height:16px;flex-basis:16px}}
 
 
-/* Authentic app icons and accessible hover labels */
+/* App/tool names: keep the tooltip above neighboring icons and cards */
+.skill-stack,.skill-stack article,.tool-icons{overflow:visible}
 .tool-icon{position:relative;overflow:visible}
 .tool-icon img{width:31px;height:31px;display:block;object-fit:contain;border-radius:7px}
-.tool-icon[title]::after{content:attr(title);position:absolute;left:50%;top:calc(100% + 9px);transform:translate(-50%,-4px);padding:6px 9px;border-radius:6px;background:#151e32;color:#fff;font-size:10px;font-weight:700;letter-spacing:.2px;line-height:1.2;white-space:nowrap;box-shadow:0 5px 14px rgba(0,0,0,.18);opacity:0;visibility:hidden;pointer-events:none;z-index:20;transition:opacity .16s ease,transform .16s ease,visibility .16s ease}
-.tool-icon[title]::before{content:"";position:absolute;left:50%;top:calc(100% + 3px);transform:translateX(-50%);border:5px solid transparent;border-bottom-color:#151e32;opacity:0;visibility:hidden;z-index:20;transition:opacity .16s ease,visibility .16s ease}
+.tool-icon[title]::after{content:attr(title);position:absolute;left:50%;bottom:calc(100% + 9px);top:auto;transform:translate(-50%,4px);padding:7px 10px;border-radius:6px;background:#151e32;color:#fff;font-size:11px;font-weight:700;letter-spacing:.2px;line-height:1.2;white-space:nowrap;box-shadow:0 5px 14px rgba(0,0,0,.18);opacity:0;visibility:hidden;pointer-events:none;z-index:1000;transition:opacity .16s ease,transform .16s ease,visibility .16s ease}
+.tool-icon[title]::before{content:"";position:absolute;left:50%;bottom:calc(100% + 3px);top:auto;transform:translateX(-50%);border:5px solid transparent;border-top-color:#151e32;opacity:0;visibility:hidden;z-index:1000;transition:opacity .16s ease,visibility .16s ease}
+.tool-icon[title]:hover,.tool-icon[title]:focus-visible{z-index:1001}
 @media(hover:hover){.tool-icon[title]:hover::after,.tool-icon[title]:focus-visible::after{opacity:1;visibility:visible;transform:translate(-50%,0)}.tool-icon[title]:hover::before,.tool-icon[title]:focus-visible::before{opacity:1;visibility:visible}}
 @media(max-width:760px){.tool-icon img{width:29px;height:29px}}
