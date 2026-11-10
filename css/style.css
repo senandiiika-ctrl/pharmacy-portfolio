@@ -194,3 +194,12 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offse
 .research-section .feature-heading>p{color:#c2cad6}
 .research-section .research-bottom a{color:#e0c99d;font-size:10px;letter-spacing:1px;font-weight:700}
 .research-section .research-bottom a:hover{color:#fff}
+
+/* Social profile links with recognizable platform icons */
+.social-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:27px}
+.social-links a{display:inline-flex;align-items:center;gap:9px;padding:10px 13px;border:1px solid #e2ded5;border-radius:3px;background:#fff;color:#536075;font-size:9px;font-weight:700;letter-spacing:1.1px;transition:background .2s,color .2s,border-color .2s,transform .2s}
+.social-links a svg{width:17px;height:17px;fill:currentColor;flex:0 0 17px}
+.social-links a b{font-size:12px;font-weight:500;color:#b28d55;margin-left:1px}
+.social-links a:hover{background:#14233d;border-color:#14233d;color:#fff;transform:translateY(-2px)}
+.social-links a:hover b{color:#e0c99d}
+@media(max-width:650px){.social-links{gap:8px}.social-links a{padding:9px 11px;font-size:8px}}
