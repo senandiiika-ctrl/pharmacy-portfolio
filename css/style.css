@@ -605,3 +605,82 @@ body{font-size:16px;line-height:1.78}
 @media(prefers-reduced-motion:reduce){
   .gallery .gallery-card:hover{transform:none}
 }
+
+
+/* Documentation uses an editorial masonry flow, independent from content cards */
+.gallery .gallery-grid{
+  display:block;
+  columns:3 260px;
+  column-gap:22px;
+}
+.gallery .gallery-card,
+.gallery .gallery-card.gallery-wide{
+  display:inline-flex;
+  flex-direction:column;
+  width:100%;
+  height:auto;
+  margin:0 0 22px;
+  break-inside:avoid;
+  vertical-align:top;
+  grid-column:auto;
+  border-radius:12px;
+  overflow:hidden;
+  background:#fff;
+  box-shadow:0 7px 20px rgba(5,12,25,.13);
+}
+.gallery .gallery-card img,
+.gallery .gallery-card.gallery-wide img{
+  display:block;
+  width:auto;
+  max-width:100%;
+  height:auto;
+  max-height:225px;
+  min-height:0;
+  object-fit:contain;
+  object-position:center;
+  align-self:center;
+  padding:8px;
+  background:#e9edf3;
+}
+.gallery .gallery-card figcaption{
+  display:block;
+  padding:15px 17px 17px;
+}
+.gallery .gallery-card figcaption small{
+  display:block;
+  margin-bottom:7px;
+  font-size:9px;
+  line-height:1.4;
+  letter-spacing:1.1px;
+}
+.gallery .gallery-card figcaption h3{
+  margin:0 0 7px;
+  font-size:16px;
+  line-height:1.4;
+}
+.gallery .gallery-card figcaption p{
+  margin:0;
+  font-size:12px;
+  line-height:1.65;
+}
+.gallery .gallery-card figcaption .inline-link{
+  margin-top:9px;
+}
+.gallery .gallery-card:hover{
+  transform:translateY(-3px);
+}
+@media(max-width:900px){
+  .gallery .gallery-grid{columns:2 230px;column-gap:17px}
+  .gallery .gallery-card,
+  .gallery .gallery-card.gallery-wide{margin-bottom:17px}
+  .gallery .gallery-card img,
+  .gallery .gallery-card.gallery-wide img{max-height:210px}
+}
+@media(max-width:560px){
+  .gallery .gallery-grid{columns:1;column-gap:0}
+  .gallery .gallery-card,
+  .gallery .gallery-card.gallery-wide{width:min(100%,420px);margin:0 auto 16px}
+  .gallery .gallery-card img,
+  .gallery .gallery-card.gallery-wide img{max-height:230px}
+  .gallery .gallery-card figcaption{padding:14px 15px 16px}
+}
