@@ -247,6 +247,9 @@ consistent image frames {
 }
 
 
+/* Preserve the original Documentation section background. */
+.gallery{background:#f1f3f7}
+
 /* Documentation gallery — one clean, responsive layout; photo proportions stay intact. */
 .gallery{padding:clamp(58px,7vw,82px) 0;scroll-margin-top:84px}
 .gallery .wrap{width:min(1060px,90vw);margin-inline:auto}
