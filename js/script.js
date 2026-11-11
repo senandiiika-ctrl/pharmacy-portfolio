@@ -21,3 +21,15 @@ document.querySelectorAll('.gallery-card,.publication-grid article,.timeline art
     }
   });
 });
+
+
+/* Match Documentation card width to each photo's real orientation. */
+document.querySelectorAll('.gallery .gallery-card img').forEach(img=>{
+  const setOrientation=()=>{
+    const card=img.closest('.gallery-card');
+    if(!card||!img.naturalWidth||!img.naturalHeight)return;
+    card.classList.toggle('is-landscape',img.naturalWidth>img.naturalHeight*1.12);
+  };
+  if(img.complete)setOrientation();
+  else img.addEventListener('load',setOrientation,{once:true});
+});
