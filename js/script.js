@@ -25,14 +25,19 @@ document.querySelectorAll('.gallery-card,.publication-grid article,.timeline art
 
 
 
-/* Documentation: determine each card's layout from its own image dimensions. */
+/* Documentation: apply orientation after the image has actually loaded. */
 document.querySelectorAll('.gallery .gallery-card img').forEach(img=>{
   const applyPhotoLayout=()=>{
     const card=img.closest('.gallery-card');
     if(!card||!img.naturalWidth||!img.naturalHeight)return;
-    card.classList.toggle('is-landscape',img.naturalWidth>img.naturalHeight*1.12);
-    card.classList.toggle('is-portrait',img.naturalHeight>img.naturalWidth*1.12);
+    const ratio=img.naturalWidth/img.naturalHeight;
+    card.classList.toggle('is-landscape',ratio>1.12);
+    card.classList.toggle('is-portrait',ratio<0.89);
+    card.classList.toggle('is-square',ratio>=0.89&&ratio<=1.12);
   };
-  if(img.complete)applyPhotoLayout();
-  else img.addEventListener('load',applyPhotoLayout,{once:true});
+  if(img.complete&&img.naturalWidth>0) applyPhotoLayout();
+  else {
+    img.addEventListener('load',applyPhotoLayout,{once:true});
+    img.addEventListener('error',()=>img.closest('.gallery-card')?.classList.add('image-load-error'),{once:true});
+  }
 });
