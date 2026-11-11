@@ -741,3 +741,98 @@ a:focus-visible, button:focus-visible, .tool-icon:focus-visible {
   .stats strong { font-size: 19px; }
   .contact-panel h2 { font-size: 31px; }
 }
+
+/* =========================================================
+   Targeted layout fixes — About, Achievements & image path
+   ========================================================= */
+
+/* About Me is explicitly white; do not include it in navy alternation. */
+section.about#about {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 5rem 1rem;
+  background: #ffffff !important;
+  color: #182238;
+}
+section.about#about > .section-tag,
+section.about#about > .two-col {
+  width: min(1080px, 100%);
+  margin-right: auto;
+  margin-left: auto;
+}
+section.about#about .section-tag { color: #7d8798; }
+section.about#about h2 { color: #0b132b; }
+section.about#about h2 em { color: #bd842d; }
+section.about#about .about-text .lead { color: #182238; }
+section.about#about .about-text p { color: #59677c; }
+section.about#about .fact-grid div {
+  border-color: #e4e9f0;
+  background: #f7f8fb;
+}
+section.about#about .fact-grid small { color: #9a7130; }
+section.about#about .fact-grid b { color: #182238; }
+
+/* Achievements: full-width background with a fluid inner content width.
+   No fixed section/card heights; content determines the section height. */
+section#achievements {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 5rem 1rem;
+  box-sizing: border-box;
+  overflow: visible;
+}
+section#achievements > .section-tag,
+section#achievements > .section-heading,
+section#achievements > .project-grid {
+  width: min(1080px, 100%);
+  margin-right: auto;
+  margin-left: auto;
+}
+section#achievements > .section-heading {
+  margin-top: 30px;
+  margin-bottom: 42px;
+}
+section#achievements > .project-grid {
+  align-items: stretch;
+  gap: 22px;
+}
+section#achievements .project-card {
+  height: auto;
+  min-height: 0;
+  overflow-wrap: anywhere;
+}
+section#achievements .project-card ul {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+@media (max-width: 620px) {
+  section.about#about,
+  section#achievements {
+    padding: 4rem 1rem;
+  }
+  section.about#about > .two-col {
+    padding-top: 25px;
+  }
+  section#achievements > .section-heading {
+    margin-top: 24px;
+    margin-bottom: 28px;
+  }
+  section#achievements > .project-grid {
+    grid-template-columns: minmax(0,1fr);
+    gap: 14px;
+  }
+  section#achievements .project-card {
+    padding: 23px 20px;
+  }
+}
+
+/* Keep gallery images within their own card without cropping. */
+.gallery-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
