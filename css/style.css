@@ -898,3 +898,78 @@ section#achievements .project-card ul {
 @media (prefers-reduced-motion: reduce) {
   #skills .tool-icon { transition: none; }
 }
+
+
+/* Final polish: consistent card corners and comfortable mobile navigation. */
+:root { --card-radius: 16px; }
+
+.project-card,
+.gallery-card,
+.education-card,
+.skill-stack > article,
+.lead-grid article,
+.interest-grid article,
+.publication-grid article,
+.content-card {
+  border-radius: var(--card-radius);
+}
+
+@media (max-width: 820px) {
+  html { scroll-padding-top: 88px; }
+  [id] { scroll-margin-top: 88px; }
+
+  .header {
+    min-height: 72px;
+    padding-top: max(10px, env(safe-area-inset-top));
+    padding-right: max(5vw, 18px);
+    padding-left: max(5vw, 18px);
+  }
+  .menu-toggle {
+    display: grid;
+    width: 48px;
+    height: 48px;
+    flex: 0 0 48px;
+    place-content: center;
+    padding: 8px;
+    border-radius: 12px;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .menu-toggle:focus-visible {
+    outline: 2px solid var(--gold-light);
+    outline-offset: 2px;
+  }
+  .header nav {
+    top: 100%;
+    left: 0;
+    right: 0;
+    max-height: calc(100dvh - 72px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    gap: 6px;
+    padding: 12px max(5vw, 18px) max(22px, env(safe-area-inset-bottom));
+    box-shadow: 0 16px 28px rgba(0,0,0,.22);
+  }
+  .header nav a {
+    display: flex;
+    align-items: center;
+    min-height: 46px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: 1.35;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .header nav a:active { background: rgba(255,255,255,.09); }
+  .header nav .nav-cta { align-self: stretch; justify-content: center; }
+}
+
+@media (max-width: 620px) {
+  html { scroll-padding-top: 84px; }
+  [id] { scroll-margin-top: 84px; }
+  .gallery-card,
+  .content-card { border-radius: var(--card-radius); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .header nav a { transition: none; }
+}
